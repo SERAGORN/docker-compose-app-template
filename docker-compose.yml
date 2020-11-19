@@ -4,13 +4,13 @@ services:
   face_checker_server:
     build:
       context: "../face-checker-back"
-      dockerfile: "../docker-compose-app-template/docker/server/Dockerfile"
+      dockerfile: "Dockerfile"
     hostname: "face_checker_server"
     tty: true
   face_checker_nginx:
     build:
       context: "../face-checker-front"
-      dockerfile: "../docker-compose-app-template/docker/nginx/Dockerfile"
+      dockerfile: "Dockerfile"
     hostname: "face_checker_nginx"
     ports:
       - "80:80"
